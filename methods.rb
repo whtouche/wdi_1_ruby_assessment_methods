@@ -6,7 +6,9 @@ end
 
 y = square(2)
 # What is the value of 'x' after this line executes?
-# nil
+#B nil (X)
+#A x has no value, no variable x is defined
+
 
 #### Question 2
 # What is the value of `age` after we call `get_older`?
@@ -17,13 +19,14 @@ end
 
 age = 10
 get_older(age)
-# 10
+#B 10 (right)
+#A get_older accepts age as input, but the output is not assigned to the age outside the method.
 
 #### Question 3
 # What is the return value of `jump` when called on the last line here?
 
 def how_high
-  energy * energy
+  energy * energy # attempting to multiply two undefined variables
 end
 
 def jump
@@ -33,7 +36,8 @@ end
 
 energy = 2
 jump
-
+#B (X)
+#A There is no return value since 'how_high' raises an error.
 
 #### Question 4
 # Write a method that accepts a string and an optional multiplier (defaults to 3)
@@ -42,6 +46,7 @@ jump
 def string_multiplier(string, multiplier = 3)
   string * multiplier
 end
+#B (Right)
 
 #### Question 5
 # Write code using this method to create the string "HELLO THERE, PUNY HUMANS"
@@ -52,3 +57,4 @@ def greeting(name:, salutation: 'Hi', volume: :low)
 end
 
 greeting(name: "puny humans", salutation: "hello", volume: :high)
+#B (Right)
